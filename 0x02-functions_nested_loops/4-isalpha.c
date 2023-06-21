@@ -3,7 +3,7 @@
  * Auth: Brennan D Baraban
  */
 
-#include "main.h"
+#include "holberton.h"
 
 /**
  * _isalpha - Checks if a character is alphabetic.
