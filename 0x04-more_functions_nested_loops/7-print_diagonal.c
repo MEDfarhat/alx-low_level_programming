@@ -1,26 +1,28 @@
-#include"main.h"
+#include "holberton.h"
 
 /**
- * print_diagonal - print a diagonal line
- *
- * @n: is the number of times the \ character
- *     should be printed
-*/
-
-void print_diagonal(int n)
+ * print_square - print a square
+ * @size: size of square
+ * Description: Can only use _putchar to print. Use '#' to print square.
+ */
+void print_square(int size)
 {
-	int postn, space;
+	int x, y;
 
-	if (n <= 0)
+	y = 0;
+
+	if (size < 1)
 		_putchar('\n');
-	else
+
+	while (y < size)
 	{
-		for (postn = 1; postn <= n; ++postn)
+		x = 0;
+		while (x < size)
 		{
-			for (space = 1; space <= postn; ++space)
-				_putchar(' ');
-			_putchar(92); /*is equal to '/' char*/
-			_putchar('\n');
+			_putchar('#');
+			x++;
 		}
+		_putchar('\n');
+		y++;
 	}
 }
