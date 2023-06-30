@@ -1,31 +1,22 @@
+#include "holberton.h"
 /**
- * reverse_array - a function that reverses the
- *                content of an array of integers
- *
- * @a: pointer to int array
- * @n: is the number of elements to swap
- *
- * Return: nothing
-*/
-
+ * reverse_array - prints reverse array.
+ * @a: array to be compared.
+ * @n: size of array.
+ * Return: reversed array.
+ */
 void reverse_array(int *a, int n)
 {
-	int temp, s, e;
+	int swap, begin, end;
 
-	s = 0;
-	e = n - 1;
-	/**
-	 * set value in array a in temp
-	 * then place the last array in
-	 * the first array then place
-	 * value in temp to last array
-	*/
-	while (s < e)
+	begin = 0;
+	end = n - 1;
+	while (begin < end)
 	{
-		temp = a[s];
-		a[s] = a[e];
-		a[e] = temp;
-		s++;
-		e--;
+		swap = *(a + begin);
+		*(a + begin) = *(a + end);
+		*(a + end) = swap;
+		begin++;
+		end--;
 	}
 }
